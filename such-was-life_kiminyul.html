@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>김인열 할머니 인터뷰</title>
     <style>
-        /* 명조체 폰트 로드 */
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap');
 
+        /* 화면 전체 설정 */
         body { 
             font-family: 'Noto Serif KR', serif; 
             display: flex; 
@@ -15,47 +15,46 @@
             align-items: center; 
             min-height: 100vh; 
             margin: 0; 
-            /* 배경색상을 검정색으로 설정 */
-            background-color: #000000; 
+            background-color: #000000; /* 완전한 검정 배경 */
             text-align: center; 
-            /* 글자색을 흰색 계열로 설정하여 가독성 확보 */
             color: #ffffff; 
         }
 
+        /* 중앙 정렬용 컨테이너 */
         .container {
-            /* 컨테이너 배경도 어둡게 설정하여 일체감 부여 */
-            background: #111111; 
-            padding: 40px 20px; 
-            border-radius: 15px; 
             width: 90%; 
-            max-width: 400px;
-            box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+            max-width: 450px; /* 모바일에서 보기 적당한 너비 */
+            padding: 20px;
+            box-sizing: border-box;
         }
 
+        /* 한글 문구 */
         .quote-kr { 
-            font-size: 1.5rem; 
+            font-size: 1.6rem; 
             font-weight: 700; 
-            margin-bottom: 10px; 
+            margin-bottom: 12px; 
             letter-spacing: -0.05em; 
-            color: #f1f1f1;
+            color: #ffffff;
         }
 
+        /* 영문 문구 */
         .quote-en { 
             font-size: 1.1rem; 
             font-style: italic; 
-            color: #aaaaaa; 
-            margin-bottom: 30px; 
+            color: #888888; /* 약간 흐린 회색으로 대비 부여 */
+            margin-bottom: 35px; 
         }
 
-        /* 16:9 비율을 유지하는 영상 영역 */
+        /* 영상 플레이어 영역 (이 부분이 보이지 않았던 문제를 해결하기 위해 고정 높이가 아닌 비율 방식을 유지) */
         .video-wrapper {
             position: relative; 
             width: 100%;
-            padding-bottom: 56.25%; 
+            padding-bottom: 56.25%; /* 16:9 비율 유지 */
             height: 0; 
             overflow: hidden; 
-            border-radius: 8px; 
-            background: #000;
+            border-radius: 12px; 
+            background: #1a1a1a; /* 영상 로딩 전 살짝 밝은 검정 박스 표시 */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         .video-wrapper iframe {
@@ -67,11 +66,11 @@
             border: 0;
         }
 
-        /* 영상 하단에 위치하는 텍스트 설정 */
+        /* 하단 기록 텍스트 */
         .footer-text { 
-            margin-top: 25px; 
+            margin-top: 30px; 
             font-size: 0.9rem; 
-            color: #777777; 
+            color: #555555; 
             letter-spacing: 0.05em;
         }
     </style>
@@ -80,4 +79,20 @@
 
     <div class="container">
         <div class="quote-kr">"그추룩 살았주게"</div>
-        <div class="quote-en">
+        <div class="quote-en">Such was life, and we endured.</div>
+
+        <div class="video-wrapper">
+            <iframe 
+                src="https://www.youtube.com/embed/m5s3pAL3kHY?rel=0&cc_load_policy=1" 
+                title="김인열 할머니 인터뷰" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="footer-text">김인열 할머니의 기록</div>
+    </div>
+
+</body>
+</html>
