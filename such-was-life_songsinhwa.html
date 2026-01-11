@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>송신화 할머니 인터뷰</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap');
+        
+        body { 
+            margin: 0; padding: 0;
+            background-color: #000000; /* 전체 배경 검정 */
+            color: #ffffff;
+            font-family: 'Noto Serif KR', serif;
+            display: flex; justify-content: center; align-items: center;
+            min-height: 100vh;
+        }
+
+        .main-container {
+            width: 100%; max-width: 500px;
+            padding: 20px; text-align: center;
+        }
+
+        .text-top { font-size: 1.5rem; font-weight: 700; margin-bottom: 10px; }
+        .text-sub { font-size: 1.1rem; color: #888; font-style: italic; margin-bottom: 30px; }
+
+        /* 영상 플레이어 (가장 표준적인 설정) */
+        /* 재생목록 뜨지 않도록 영상 끝나면 다시 처음으로 돌아가도록 세팅 */
+        .video-box {
+            position: relative; width: 100%; padding-bottom: 56.25%;
+            height: 0; background: #111; border-radius: 8px; overflow: hidden;
+        }
+
+        .video-box iframe {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
+        }
+
+        .text-bottom { margin-top: 25px; font-size: 0.9rem; color: #555; }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="text-top">"그추룩 살았주게"</div>
+        <div class="text-sub">모록밧듸서</div>
+
+        <div class="video-box">
+
+<iframe 
+    src="https://www.youtube.com/embed/rLpea0o7wPo?rel=0&cc_load_policy=0&loop=1&playlist=rLpea0o7wPo" 
+    title="송신화 삼춘" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen>
+</iframe>
+        </div>
+
+        <div class="text-bottom">© 송신화 삼춘</div>
+    </div>
+
+</body>
+</html>
